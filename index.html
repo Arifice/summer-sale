@@ -23,7 +23,7 @@
         <div class="flex flex-col-reverse md:flex-row lg:flex-row justify-center items-center">
             <div class="flex-1 text-center">
                 <p class="text-3xl mb-6">---SALE FEVER---</p>
-                <h1 class="text-6xl font-bold">Purchase TK 200 or <br> above & get <span>20% off</span></h1>
+                <h1 class="text-6xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
                 <div class="flex flex-col md:flex-row lg:flex-row gap-8 justify-center mt-5 items-center">
                     <p class="text-2xl">Use Promo Code</p>
                     <button class="text-2xl text-white rounded-md py-1 px-3 bg-[#E527B2]">SELL200</button>
@@ -36,14 +36,14 @@
 
     </header>
     <main class="container mx-auto my-24">
-        <div class="flex gap-4 flex-col-reverse lg:flex-row">
+        <div class="flex gap-8 flex-col-reverse lg:flex-row">
             <!-- product section -->
             <div class="">
                 <!-- first row -->
                 <h1 class=" m-5 text-[40px] font-semibold">Kitchenware</h1>
                 <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <!-- first item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem1Price()" class="card w-96 bg-base-100  shadow-xl">
                         <figure><img src="./images/prod1.png" alt="" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                         <div class="rating">
@@ -54,11 +54,11 @@
                             <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                         </div> 
                         <p class="text-xl font-semibold">K. Accessories</p> 
-                        <p class="text-[#11111180] text-xl">39.00 TK</p>                   
+                        <p id="item-1-price" class="text-[#11111180] text-xl">39.00 TK</p>                   
                         </div>
                     </div>
                     <!-- second item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem2Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -69,11 +69,11 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">K. Accessories</p> 
-                            <p class="text-[#11111180] text-xl">25.00 TK</p>                   
+                            <p id="item-2-price" class="text-[#11111180] text-xl">25.00 TK</p>                   
                         </div>
                     </div>
                     <!-- third item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem3Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -84,7 +84,7 @@
                             <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">Home Cooker</p> 
-                            <p class="text-[#11111180] text-xl">49.00 TK</p>                   
+                            <p id="item-3-price" class="text-[#11111180] text-xl">49.00 TK</p>                   
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                 <h1 class=" m-5 text-[40px] font-semibold">Sportswear</h1>
                 <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <!-- first item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem4Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod4.png" alt="" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                         <div class="rating">
@@ -103,11 +103,11 @@
                             <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                         </div> 
                         <p class="text-xl font-semibold">Sports Back Cap</p> 
-                        <p class="text-[#11111180] text-xl">49.00 TK</p>                   
+                        <p id="item-4-price" class="text-[#11111180] text-xl">49.00 TK</p>                   
                         </div>
                     </div>
                     <!-- second item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem5Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod5.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -118,11 +118,11 @@
                             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">Full Jersey Set</p> 
-                            <p class="text-[#11111180] text-xl">69.00 TK</p>                   
+                            <p id="item-5-price" class="text-[#11111180] text-xl">69.00 TK</p>                   
                         </div>
                     </div>
                     <!-- third item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem6Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod6.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -133,7 +133,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">Sports cates</p> 
-                            <p class="text-[#11111180] text-xl">159.00 TK</p>                   
+                            <p id="item-6-price" class="text-[#11111180] text-xl">159.00 TK</p>                   
                         </div>
                     </div>                  
                 </div>
@@ -141,7 +141,7 @@
                 <h1 class=" m-5 text-[40px] font-semibold">Furniture</h1>
                 <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <!-- first item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem7Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod7.png" alt="" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                         <div class="rating">
@@ -152,11 +152,11 @@
                             <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                         </div> 
                         <p class="text-xl font-semibold">Single Relax Chair</p> 
-                        <p class="text-[#11111180] text-xl">185.00 TK</p>                   
+                        <p id="item-7-price" class="text-[#11111180] text-xl">185.00 TK</p>                   
                         </div>
                     </div>
                     <!-- second item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem8Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod8.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -167,11 +167,11 @@
                             <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">Children play</p> 
-                            <p class="text-[#11111180] text-xl">299.00 TK</p>                   
+                            <p id="item-8-price" class="text-[#11111180] text-xl">299.00 TK</p>                   
                         </div>
                     </div>
                     <!-- third item -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div onclick="addItem9Price()" class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod9.png" alt="Shoes" /></figure>
                         <div class="card-body flex flex-col items-center text-center">                     
                             <div class="rating">
@@ -182,7 +182,7 @@
                             <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                             </div> 
                             <p class="text-xl font-semibold">Flexible Sofa</p> 
-                            <p class="text-[#11111180] text-xl">339.00 TK</p>                   
+                            <p id="item-9-price" class="text-[#11111180] text-xl">339.00 TK</p>                   
                         </div>
                     </div>                  
                 </div>
@@ -190,25 +190,46 @@
 
             </div>
             <!-- sale section -->
-            <div>
+            <div class=" p-8">
                 <!-- coupon section -->
                 <div>
-                    <p class="text-2xl"> Have coupon?</p>
+                    <p class="text-3xl font-semibold"> Have coupon?</p>
                     <div class="flex my-3">
-                        <input class="text-xl px-2 rounded-md border-2 border-black" type="password" placeholder="Coupon code">
-                        <button class="bg-[#E527B2] text-white text-2xl ml-2 rounded-md py-2 px-4">Apply</button>                    
+                        <input id="coupon-input" class="text-xl px-2 rounded-md border-2 border-black" type="password" placeholder="Coupon code">
+                        <button disabled id="coupon-btn" class="bg-[#E527B2] text-white text-2xl  rounded-md py-3 px-5">Apply</button>                    
                     </div>
                 </div>
                 <!-- selected item display section-->
                 <div>
+                    <h1 class="text-3xl font-semibold">Selected Item List</h1>
+                    <div id="entrySelectedItem">
+
+                    </div>
 
                 </div>
-                <!-- payment section -->
-                <div>
-
+                <!-- payment section -->                
+                <div class="text-3xl font-semibold mt-8">
+                    <hr class="border-b-5  mb-3">
+                    <p>Total price :  <span id="total-price" class="text-gray-500">00.00</span> Tk</p>
+                    <p>Discount :  <span id="discount" class="text-gray-500"> 00.00</span> Tk</p>
+                    <p>Total :  <span id="total" class="text-gray-500"> 00.00</span> Tk</p>
+                    <hr class="border-b-5 mt-3">
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button disabled id="make-parchase-btn" class="text-2xl bg-[#E527B2] rounded-md px-8 py-4 text-white mt-3" onclick="my_modal_1.showModal()">Make Purchase</button>
+                    <dialog id="my_modal_1" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <h3 class="font-bold text-lg">Hello!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
                 </div>
             </div>
         </div>
     </main>
+    <script src="scripy.js"></script>
 </body>
 </html>
