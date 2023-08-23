@@ -40,8 +40,8 @@ function priceCalculation(elementId){
    const price=getPrice(elementId);
    const previousPrice=getPrice('total-price');   
    const currentPrice=price+previousPrice;   
-   setElementInnerText('total-price',currentPrice);
-   setElementInnerText('total',currentPrice);
+   setElementInnerText('total-price',currentPrice.toFixed(2));
+   setElementInnerText('total',currentPrice.toFixed(2));
 }
 function getPrice(priceId){
     const price=document.getElementById(priceId).innerText;
@@ -59,10 +59,16 @@ function addSelectedItem(itemName,price){
     itemEntry.appendChild(p);
 }
 
+    const totalPrice=getPrice('total');
+    console.log(totalPrice);
+    const purchaseBtn=document.getElementById('make-parchase-btn');
+    purchaseBtn.addEventListener('click',function(){
+        console.log(totalPrice);
+    })
 
 document.getElementById('coupon-input').addEventListener('keyup',function(event){
     const text=event.target.value;
-    const couponApply=document.getElementById('coupon-btn');
+    const couponApply=document.getElementById('coupon-btn');    
     
     if(text=='SELL200'){
         couponApply.removeAttribute('disabled');        
@@ -71,7 +77,7 @@ document.getElementById('coupon-input').addEventListener('keyup',function(event)
         couponApply.setAttribute('disabled',true);
     }
     couponApply.addEventListener('click',function(event){
-        const price=getPrice('total-price');       
+        const price=getPrice('total-price');                     
         if(price>=200){
             const discount=price*0.2;
             setElementInnerText('discount',discount.toFixed(2));
@@ -79,17 +85,19 @@ document.getElementById('coupon-input').addEventListener('keyup',function(event)
         }
         else{
             setElementInnerText('total',price);
-        }       
+        } 
+            
     })
-})
-document.getElementById('make-parchase-btn').addEventListener('click',function(event){
-    const makePurchaseBtn=event.target;
+});
 
-    const price=getPrice('total-price');  
-    if(price>0){
-        makePurchaseBtn.removeAttribute('disabled');
+document.getElementById('maindiv').addEventListener('click',function(){
+    const totalPrice=getPrice('total');
+    const makeParchaseButton=document.getElementById('make-parchase-btn');
+    if(totalPrice>0){
+        makeParchaseButton.removeAttribute('disabled');        
     }
     else{
-        makePurchaseBtn.setAttribute('disabled',true);
+        makeParchaseButton.setAttribute('disabled',true);
     }
+
 })
