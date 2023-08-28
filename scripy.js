@@ -93,7 +93,7 @@ document.getElementById('coupon-input').addEventListener('keyup',function(event)
 document.getElementById('maindiv').addEventListener('click',function(){
     const totalPrice=getPrice('total');
     const makeParchaseButton=document.getElementById('make-parchase-btn');
-    if(totalPrice>0){
+    if(totalPrice>200){
         makeParchaseButton.removeAttribute('disabled');        
     }
     else{
